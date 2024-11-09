@@ -3,23 +3,14 @@
  */
 package wordgame;
 
-import wordgame.model.Guesser;
 import wordgame.model.SecretWord;
 import wordgame.model.Game;
-import wordgame.guessers.TerminalUser;
-import wordgame.guessers.RandomGuesser;
 import wordgame.view.GameGUI;
 import wordgame.controller.GameController;
 
 public class App {
 
    public static void main(String[] args) {
-      Guesser guesser = new TerminalUser();
-      if (args.length > 0) {
-         if (args[0].equals("random")) {
-            guesser = new RandomGuesser();
-         }
-      }
       SecretWord secret = new SecretWord("chocolate");
       Game game = new Game(secret);
       GameController controller = new GameController(game);

@@ -56,6 +56,10 @@ public class GameGUI implements Observer{
       mainFrame.setVisible(true);
    }
 
+   public void disableLetter(char letter) {
+      this.buttons.add(letter);
+   }
+
    @Override
    public void update() {
       this.wordLabel.setText(secretWord.getCurrentGuess());
