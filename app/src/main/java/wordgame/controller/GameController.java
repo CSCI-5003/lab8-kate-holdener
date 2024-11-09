@@ -25,6 +25,7 @@ public class GameController implements ActionListener{
       JButton button = (JButton)event.getSource();
       String text = button.getText();
       char letter = text.charAt(0);
+      this.gui.disableLetter(letter);
       game.playLetter(letter);
    }
 }
