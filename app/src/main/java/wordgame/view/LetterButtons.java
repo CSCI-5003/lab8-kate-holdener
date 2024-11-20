@@ -17,6 +17,7 @@ public class LetterButtons extends JPanel {
          this.buttons[nextButton] = new JButton(String.valueOf(letter));
 
          // TODO: attach the action listener passed to the constructor to each button
+         this.buttons[nextButton].addActionListener(listener);
 
          this.add(this.buttons[nextButton]);
          nextButton++;
